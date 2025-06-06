@@ -99,7 +99,7 @@ def guidelines():
 
 
 if __name__ == '__main__':
-    # Get port from environment variable or use default
+    # Development server configuration
     port = int(os.environ.get('PORT', 10000))
-    logger.info(f"Starting server on port {port}")
-    app.run(host='0.0.0.0', port=port)
+    logger.info(f"Starting development server on http://0.0.0.0:{port}")
+    app.run(host='0.0.0.0', port=port, debug=True)

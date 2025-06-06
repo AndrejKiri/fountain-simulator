@@ -82,7 +82,7 @@ def validate_image_warnings(image, dt):
         updated_image['width'] = 1024
         updated_image['height'] = int(original_image['height'] / factor)
         size = updated_image['width'], updated_image['height']
-        image.thumbnail(size, Image.ANTIALIAS)
+        image.thumbnail(size, Image.Resampling.LANCZOS)
         resized = "Resized"
     else:
         updated_image['width'] = original_image['width']
