@@ -50,10 +50,14 @@ def upload_pic_file():
         image = image.convert("1")
         image, converted, resized = validate_image_warnings(image, dt)
         vid_file_name = "Video{}_{}_{}".format(converted, style, dt)
-        pixelList = prepare_pixels(image)
-        frameList = prepare_frames(pixelList, vid_file_name, rows)
-        create_video(vid_file_name, frameList)
-        return redirect(url_for('result', name=vid_file_name))
+        try:
+            pixelList = prepare_pixels(image)
+            frameList = prepare_frames(pixelList, vid_file_name, rows)
+            create_video(vid_file_name, frameList)
+            return redirect(url_for('result', name=vid_file_name))
+        except Exception as e:
+            flash(f'An error occurred during processing: {str(e)}', 'error')
+            return render_template('index.html')
 
 
 @app.route('/<name>', methods=['GET'])
