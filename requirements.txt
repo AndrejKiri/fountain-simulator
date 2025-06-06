@@ -1,5 +1,6 @@
-Flask
-Pillow
-numpy
-requests
-opencv-python
+Flask==3.0.2
+Pillow==10.2.0
+numpy==1.26.4
+requests==2.31.0
+opencv-python==4.9.0.80
+gunicorn==21.2.0
