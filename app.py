@@ -12,8 +12,10 @@ app = Flask(__name__)
 app.secret_key = b'R\xdb8g\xcc\x9d\xf7\x8e\xc9\x89P(W\xf6]\xf2'
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST', 'HEAD'])
 def upload_pic_file():
+    if request.method == 'HEAD':
+        return '', 200
     if request.method == 'GET':
         return render_template('index.html')
     if request.method == 'POST':
