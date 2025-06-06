@@ -91,3 +91,8 @@ def result(name):
 @app.route('/guidelines', methods=['GET'])
 def guidelines():
     return current_app.send_static_file('guidelines.html')
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
