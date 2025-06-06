@@ -6,6 +6,11 @@ from simulation import prepare_pixels, create_video, \
 import datetime
 import os
 from PIL import Image
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
@@ -94,5 +99,7 @@ def guidelines():
 
 
 if __name__ == '__main__':
+    # Get port from environment variable or use default
     port = int(os.environ.get('PORT', 10000))
+    logger.info(f"Starting server on port {port}")
     app.run(host='0.0.0.0', port=port)
