@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Fountain simulator | Guidelines</title>
+  </head>
+  <body>
+    <header  id="item-1">
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Fountain simulator</a>
+      </nav>
+      <nav aria-label="breadcrumb" style="margin-top:55px">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Guidelines</li>
+        </ol>
+      </nav>
+      <!-- <div class="jumbotron text-center">
+        <h1>Design guidelines</h1>
+      </div> -->
+    </header>
+
+    <main role="main" class="container">
+      <div class="container">
+        <div class="row">
+          <div class="flex-column">
+            <nav id="navbar-example3" class="navbar navbar-light bg-light">
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1">Intro</a>
+                <a class="nav-link" href="#item-2">Fountain</a>
+                <a class="nav-link" href="#item-3">Text</a>
+                <a class="nav-link" href="#item-4">Picture</a>
+                <a class="nav-link" href="#item-5">Afterword</a>
+              </nav>
+            </nav>
+          </div>
+          <div class="col-10">
+            <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+              <img src="./static/fountain_intro.jpg" alt="The fountain" width="100%">
+              <h1>Fountain Design Guidelines</h1>
+              <h4>Introduction</h4>
+              <p>The fountain in front of Janáček Theatre and the surrounding area is certainly one of the most interesting places to visit in Brno for both visitors and locals. The falling water patterns of text and pictures that the fountain draws in the air has a stunning effect on bystanders.</p>
+              <p id="item-2">From the first sight, the fountain might look like a simple displaying device but it is not so. Many of its specifics might stay unnoticed or overlooked for its viewers. However, when these specifics are not understood by authors of works that are displayed on the fountain, things might get wrong. The scale of possible problems is huge - from getting small details wrong to unpleasant or even completely disturbing experience.</p>
+              <p>Here I aim to uncover several important specifics of the fountain and describe design guidelines that should help authors to create optimal works for the fountain with ease.</p>
+              <div class="text-center">
+                <img src="./static/fountain_schematic.png" class="img-fluid" alt="Fountain annotated">
+              </div>
+              <h4>Fountain</h4>
+              <p>The fountain is 18 meters wide and 5.5 meters high metallic frame set into a pool of water. Inside of a top panel of the frame, there is a continuously replenished water tank that supplies water to 1024 computer controlled nozzles located in the bottom side of the panel. Sixty-four multicolor LED lights are also located in the top panel and another sixty-four similar lights are placed on the bottom of the pool. The lights illuminate the fountain when it gets dark.</p>
+              <p>The water wall is a dynamic body of water (water display) created by a computer-synchronized release of water spurts from the nozzles. It is thirteen meters wide and four meters tall. It takes water spurt approximately one second to fall from a nozzle to the surface of the pool. Throughout the fall the spurts are accelerated by the gravity. This phenomenon causes stretching of the image displayed on the water wall from top to bottom.</p>
+              <p id="item-3">The computer software responsible for nozzles synchronization accepts raster black-and-white images on input and on the fountain, it renders black as water and white as empty space. Supported image file formats are png. and bmp. The required width of the image is 1024px, the height of the image may vary. Note that at once approximately 350px high part of an image is displayed. When considering limitations of displaying it is necessary to differentiate between two forms of content to be displayed: text and pictures. Each form of content has its specifics that need to be taken into account.</p>
+              <p>The fountain is a dominant landmark of Sady Osvobozni park in the city center of Brno. It borders with a square with a number of small water elements and concrete benches on one side and three oblique grass terraces on the other. The area is very popular, especially in summer. Further away there is a frequented crossroad with multiple tram stops. From all of these, places the fountain is well visible and number of viewers can be counted in thousands per day.</p><br/>
+              <div class="text-center">
+                <img src="./static/fountain_text.jpg" class="img-fluid" alt="Text on fountain">
+              </div>
+              <h4>Text</h4>
+              <p>There is no other way to communicate a message to the viewer more clearly than via text. When displaying the text the key characteristics to consider from the viewer’s perspective are readability and comfort while reading. Text that is not well readable is useless and because the fountain has entertaining character, discomfort while reading should be also avoided.</p>
+              <p>Below are formulated guidelines for the most important attributes of style and content of text element together with guidelines covering relationships with the surrounding of the text element on the water wall.</p>
+              <h5>Style</h5>
+              <p>Text can have various style attributes but the most important one for water wall is certainly size. Size of the text influences readability dra- matically, and its correct choice can balance drawbacks of getting on edge with other text attributes.
+              <br/><b>Size of text should not be smaller than 75px or larger then 125px.</b><br/>
+              Even if smaller texts might still look fine on a computer screen while designing, due to displaying errors caused especially by wind, nozzle issues, water circulation in the tank, and low contrast during the day, they are often completely unreadable on the water wall. Using bigger texts, on the other hand, shortens the time of its exposure on the water wall what compromises readability, and constraints length of the content that is possible to display.</p>
+              <p>Other text style attributes have less influence on the readability of text. Several of them are good to consider especially regarding selection of fonts, like weight slope and serifs, but rather than going into details its enough to follow the rule of thumb:
+              <br/><b>Fonts with thin, diagonal lines or many small details should be avoided.</b><br/>
+              Thin lines, as well as small details, get easily broken due to errors of displaying. Diagonal lines bend on the water wall and such a bending generally does not look good.</p>
+              <h5>Content</h5>
+              <p>Size of text should never be considered independently from content that is to be displayed and especially the length of text on one line. It is due to the very short time of exposure on the water wall and well defined recommended text size range.
+              <br/><b>One line of text should not be longer than 12 characters.</b><br/>
+              Texts longer than 12 characters (including spaces) are difficult to read even for the average person, not to talk about children, elderly and people with eyesight issues. Texts that are 15 characters long are un- readable.</p>
+              <br/>
+              <h5>Context of the whole scene</h5>
+              <p>The readability of one particular text element is also influenced by factors external to it. Three of them are good to keep in mind when designing for the water wall.</p>
+              <p>Spacing between the text element and other text elements displayed on the fountain is one of them. To maintain good readability, it is necessary to keep the distance between text elements high enough to allow the viewer to process the information displayed and to get ready for the display of the following text.
+              <br/><b>Space between two lines of text should not be smaller than 100px or larger than 600px.</b><br/>
+              If the space between two lines is smaller, it may not be enough for the viewer to read several lines in a row comfortably. However, the minimal value is not given strictly and it is possible to work with it, if the size and length of text are taken into account. Bigger spacing is not recommended so the author does not risk losing attention of the viewer.</p>
+              <p>Rotation of text element is another factor, that provides interesting opportunities but in the same time should be considered carefully because it can cause discomfort or inefficiency.
+              <br/><b>Text should not be rotated clockwise or more than 45∘ counterclockwise.</b><br/>
+              Even reasonably small clockwise rotation can dramatically lower the exposure time of text on the water wall and therefore should be avoided at all. Counterclockwise rotation may seem as good idea up to 90∘however, after exceeding 45∘reading of the text becomes un- comfortable. Rotating text upside down is obviously a bad idea when readability is a goal.</p>
+              <br/><i>Rotating text up to 45∘clockwise actually improves the readability because it synergizes well with the process of reading.</i><br/><br/>
+              <p>The last external factor that influences the readability of text element mentioned in this guideline is its position, and especially position for several text elements that come in a sequence.
+              <br/><b id="item-4">Texts position should be kept the same or similar.</b><br/>
+              Random positioning may look playful and interesting however find- ing the text takes a certain amount of time, and it shortens the time that viewers can spend by actually reading and processing the text.</p>
+              <br/><i>Using visual guides that are displayed before the text and that lead viewers eye towards the start of the text increase readability because it allows reading the text right away without the necessity to find it first.</i><br/><br/>
+              <div class="text-center">
+                <img src="./static/fountain_picture.png" class="img-fluid" alt="Picture on fountain">
+              </div>
+              <h4>Picture</h4>
+              <p>There is a saying that one picture speaks for 1000 words. The message, even if less clear, may be more attractive and easy to perceive in a form of picture compared to text. Also, pictures undoubtedly suit the relaxed atmosphere of the fountain surroundings.</p>
+              <p>In opposite to text, the picture is all about the freedom of expres- sion of the artist and therefore there are only a few rules that are good to follow to keep a picture easy to perceive and good looking on the fountain.</p>
+              <p>One of attributes of picture that make sense to discuss is height. The factor that makes perception of the picture more difficult is displaying it in fragments the viewer needs to resemble in his mind afterward. The easiest to perceive is a picture displayed as a whole at once.
+              <br/><b>Single-scene picture should not be higher than 100px.</b><br/>
+              A higher picture would get unnecessarily stretched and if stretched even more, it would just not be displayed at once. Even if more difficult to perceive, displaying pictures that run over one scene is inevitable because not every picture fits height of 150px. However there is still a limit for height of one picture because it is not a good idea to force the viewer to remember a too high number of fragments.
+              <br/><b>Multi-scene picture should not be higher than 600px.</b><br/>
+              With even higher pictures it becomes more difficult and time-consuming for the viewer to mentally resemble the picture or it can be impossible at all.</p>
+              <p>When creating pictures for the fountain, it is good to take into account that there are gaps between the water wall and the fountain frame.
+              <br/><b id="item-5">Picture should not look like exceeding sides of the fountain.</b><br/>
+              A picture that is cut on either left or right side unnecessarily stresses out the presence of the gaps which could remain unnoticed by the viewer otherwise.</p>
+              <p>It is recommended not to use some shapes in the picture.
+              <br/><b>Pictures with thin, diagonal lines or many small details should be avoided.</b>
+              Just as mentioned in a similar recommendation for text, thin lines, as well as small details, get easily broken due to errors of displaying. Diagonal lines bend on the water wall, and such a bending generally does not look good.</p>
+              <h4>Afterword</h4>
+              <p>When following the aforementioned guidelines, author should not be able to create a work that will look bad on the fountain, would be hard to read or uncomfortable to watch. However, it does not mean that breaking the guidelines would inevitably lead to a bad outcome. As it is explained above, there are many factors, that influence how the work will look and at the same time, they influence each other. Experimenting and breaking some of these guidelines might be a good idea, but it is important to keep in mind that something might likely go wrong.</p>
+              <p>After reading this design guidelines there should be no more sur- prises for you when designing content for the fountain in front of Janáček Theatre and there is only last thing to be said: Good luck.</p>
+              <br/><br/><br/><br/><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Fountain simulator | Video</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">Fountain simulator</a>
+      </nav>
+      <nav aria-label="breadcrumb" style="margin-top:55px">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Video</li>
+        </ol>
+      </nav>
+    </header>
+
+    <main role="main" class="container">
+
+      <!-- <div class="alert alert-info" role="alert">
+        {{name}}
+      </div> -->
+
+      <div class="shadow p-3 mb-5 bg-white rounded">
+        <video autoplay loop width="100%" height=auto controls="controls">
+          <!-- <source src="/static/VideoTesting20181205200408.mp4" type="video/mp4"/> -->
+          <source src="/static/{{name}}.webm" type="video/webm"/>
+          <!-- <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"> -->
+          Nav doesn't support html5 video
+        </video>
+      </div>
+
+      {% if converted %}
+        <div class="alert alert-note" role="alert">
+          Because your picture consisted of more colors than only white and black it was converted to required state. Bellow you can find the image version that was used for simulation.
+        </div>
+      {% endif %}
+
+      {% if resized %}
+        <div class="alert alert-note" role="alert">
+          Because your picture was wider than 1024px it was resized to required state. Bellow you can find the image version that was used for simulation.
+        </div>
+      {% endif %}
+
+      {% if saved_image %}
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <img src="/static/{{saved_image_name}}" width="100%"/>
+        </div>
+      {% endif %}
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
